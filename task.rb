@@ -108,6 +108,7 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+  puts data [:user][:name]
 end
 
 def q13
@@ -122,11 +123,11 @@ end
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
-  # 以下に回答を記載
-  data.each_key do |key|
-    puts "#{key}"
+  # 以下に回答を記載 
+  array = data.keys
+  puts array
+
   end
-end
 
 def q15
   data1 = { name: "saitou", hobby: "soccer", age: 33, role: "admin" }
@@ -146,7 +147,9 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each do |user|
+    puts "私の名前は #{user[:name]}です。年齢は #{user[:age]}です。"
+ end
 end
 
 class UserQ17
